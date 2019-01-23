@@ -23,6 +23,19 @@ class NpmPlugin implements Plugin<Project> {
             }
         }
 
+        project.task("npmInstallDep", type: DefaultTask) {
+            doLast {
+
+                final NpmUtil nodeUtil = NpmUtil.getInstance(project.npm.nodeJsVersion)
+                def nodeModulesDir = project.file("node_modules");
+                final String exec = nodeUtil.resolveCommand(nodeModulesDir, "npm")
+                if (exec == null) {
+                    throw new RuntimeException("Cannot find npm")
+                }
+
+            }
+        }
+
         final cleanTask = project.tasks.findByPath("clean")
         cleanTask.dependsOn("npmClean")
 
