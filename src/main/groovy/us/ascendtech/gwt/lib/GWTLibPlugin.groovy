@@ -110,7 +110,7 @@ class GWTLibPlugin implements Plugin<Project> {
 
 
             if (gwt.includeGwtUser) {
-                deps.add(project.dependencies.create("com.google.gwt:gwt-user:${gwt.gwtVersion}"))
+                deps.add(project.dependencies.create("org.gwtproject :gwt-user:${gwt.gwtVersion}"))
             }
         }
 
@@ -134,7 +134,7 @@ class GWTLibPlugin implements Plugin<Project> {
         if (gwt.includeGwtUser) {
             project.configurations.all {
                 resolutionStrategy {
-                    force "com.google.gwt:gwt-user:${gwt.gwtVersion}"
+                    force "org.gwtproject:gwt-user:${gwt.gwtVersion}"
                 }
             }
         }
