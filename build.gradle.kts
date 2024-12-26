@@ -4,7 +4,7 @@ plugins {
     id("com.gradle.plugin-publish") version "0.15.0"
     id("java-gradle-plugin")
     id("groovy")
-    id("org.ajoberstar.reckon") version "0.13.0"
+    id("org.ajoberstar.reckon") version "0.17.0"
 }
 
 configure<ReckonExtension> {
