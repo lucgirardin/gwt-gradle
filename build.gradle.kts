@@ -1,17 +1,23 @@
 import org.ajoberstar.reckon.gradle.ReckonExtension
 
 plugins {
-    id("com.gradle.plugin-publish") version "0.15.0"
     id("java-gradle-plugin")
+    id("com.gradle.plugin-publish") version "0.21.0" // Latest is 1.3.0
     id("groovy")
     id("org.ajoberstar.reckon") version "0.17.0"
+    `maven-publish`
 }
+
+group = "us.ascendtech"
 
 configure<ReckonExtension> {
     scopeFromProp()
     stageFromProp("rc", "final") // For distribution
 //    snapshotFromProp() // For local build
 }
+
+val reckonVersion: String by project.extra
+version = if(project.hasProperty("releaseVersion")) project.property("releaseVersion") as String else reckonVersion
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8

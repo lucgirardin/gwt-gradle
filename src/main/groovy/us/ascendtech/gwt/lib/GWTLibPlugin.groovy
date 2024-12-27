@@ -110,7 +110,7 @@ class GWTLibPlugin implements Plugin<Project> {
 
 
             if (gwt.includeGwtUser) {
-                deps.add(project.dependencies.create("org.gwtproject :gwt-user:${gwt.gwtVersion}"))
+                deps.add(project.dependencies.create("org.gwtproject:gwt-user:${gwt.gwtVersion}"))
             }
         }
 

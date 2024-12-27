@@ -4,7 +4,7 @@ Requires Java 11 and tested on Gradle 7.x only
 See below for npm plugin
 
 # gwt.modern
-A plugin for GWT 2.9.x projects using webpack and npm.  Eventually will support J2CL / GWT 3.x. Compiles to archive file for deploy on web server.
+A plugin for GWT 2.12.x projects using webpack and npm.  Eventually will support J2CL / GWT 3.x. Compiles to archive file for deploy on web server.
 
 Work in progess examples can be found https://github.com/ascendtech/gwt-examples
 
@@ -54,6 +54,11 @@ Compile to tar gz bundle for deploy on web server
 gradle gwtArchive #archive in build/webapp
 ```
 
+Publish to local Maven repo using custom version
+```bash
+./gradlew publishToMavenLocal -PreleaseVersion=0.9.3-SNAPSHOT
+```
+
 Run gwt devmode with webpack backend
 ```
 gradlew gwtDev
@@ -69,7 +74,7 @@ gradle compileJava —build-cache -t compileJava
 
 # gwt.classic
 
-A plugin for GWT 2.9 projects.  Compiles to war
+A plugin for GWT 2.12 projects.  Compiles to war
 
 ## Basic Usage
 
