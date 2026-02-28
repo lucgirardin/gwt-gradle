@@ -4,6 +4,7 @@ plugins {
     id("java-gradle-plugin")
     id("groovy")
     alias(libs.plugins.reckon)
+    id("com.github.ben-manes.versions") version "0.53.0"
 }
 
 reckon {
@@ -27,7 +28,7 @@ group = "us.ascendtech"
 
 dependencies {
     implementation(gradleApi())
-    implementation("org.codehaus.plexus:plexus-archiver:4.10.0")
+    implementation("org.codehaus.plexus:plexus-archiver:4.11.0")
     testCompileOnly(gradleTestKit())
 }
 
