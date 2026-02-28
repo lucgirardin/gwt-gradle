@@ -127,21 +127,21 @@ gradle gwtDev
 
 ## gwt {} Extension Options
 
-| Option | Default | Description |
-|---|---|---|
-| `gwtVersion` | `"2.12.2"` | GWT SDK version |
-| `modules` | `[]` | List of GWT modules to compile or run |
-| `libs` | `[]` | Shorthand library dependencies (see below) |
-| `style` | `"OBFUSCATED"` | Script output style: `DETAILED`, `OBFUSCATED`, or `PRETTY` |
-| `logLevel` | `"INFO"` | Logging detail: `ERROR`, `WARN`, `INFO`, `TRACE`, `DEBUG`, `SPAM`, or `ALL` |
-| `localWorkers` | available processors | Number of local workers for compiling permutations |
+| Option | Default                   | Description |
+|---|---------------------------|---|
+| `gwtVersion` | `"2.13.0"`                | GWT SDK version |
+| `modules` | `[]`                      | List of GWT modules to compile or run |
+| `libs` | `[]`                      | Shorthand library dependencies (see below) |
+| `style` | `"OBFUSCATED"`            | Script output style: `DETAILED`, `OBFUSCATED`, or `PRETTY` |
+| `logLevel` | `"INFO"`                  | Logging detail: `ERROR`, `WARN`, `INFO`, `TRACE`, `DEBUG`, `SPAM`, or `ALL` |
+| `localWorkers` | available processors      | Number of local workers for compiling permutations |
 | `proxy` | `"http://localhost:8080"` | Webpack backend address (modern plugin) |
-| `includeGwtUser` | `true` | Include gwt-user on the classpath |
-| `extra` | `true` | Produce GWT "extra" output directory |
-| `forceRecompile` | `true` | Force recompilation (disable up-to-date checks) |
-| `sourceLevel` | `"17"` | Java source level for GWT compilation |
-| `incremental` | `false` | Enable incremental compilation |
-| `persistentunitcache` | `true` | Enable GWT persistent unit cache |
+| `includeGwtUser` | `true`                    | Include gwt-user on the classpath |
+| `extra` | `true`                    | Produce GWT "extra" output directory |
+| `forceRecompile` | `true`                    | Force recompilation (disable up-to-date checks) |
+| `sourceLevel` | `"17"`                    | Java source level for GWT compilation |
+| `incremental` | `false`                   | Enable incremental compilation |
+| `persistentunitcache` | `true`                    | Enable GWT persistent unit cache |
 
 ### Available libs
 
