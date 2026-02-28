@@ -4,6 +4,7 @@ plugins {
     id("java-gradle-plugin")
     id("groovy")
     alias(libs.plugins.reckon)
+    id("com.github.ben-manes.versions") version "0.53.0"
 }
 
 reckon {
