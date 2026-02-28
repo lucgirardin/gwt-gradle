@@ -28,7 +28,7 @@ group = "us.ascendtech"
 
 dependencies {
     implementation(gradleApi())
-    implementation("org.codehaus.plexus:plexus-archiver:4.10.0")
+    implementation("org.codehaus.plexus:plexus-archiver:4.11.0")
     testCompileOnly(gradleTestKit())
 }
 
